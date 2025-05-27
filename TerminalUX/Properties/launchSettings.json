@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TerminalUX (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "TerminalUX (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

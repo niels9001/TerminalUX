@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window
+    x:Class="TerminalUX.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:TerminalUX"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="using:TerminalUX.Pages"
+    xmlns:ui="using:CommunityToolkit.WinUI"
+    Title="TerminalUX"
+    mc:Ignorable="d">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop Kind="BaseAlt" />
+    </Window.SystemBackdrop>
+
+
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.Resources>
+            <StaticResource x:Key="TabViewItemHeaderBackground" ResourceKey="ControlFillColorTransparentBrush" />
+            <StaticResource x:Key="TabViewItemHeaderBackgroundSelected" ResourceKey="LayerOnMicaBaseAltFillColorDefaultBrush" />
+        </Grid.Resources>
+        <TabView
+            x:Name="Tabs"
+            VerticalAlignment="Stretch"
+            CanTearOutTabs="True"
+            IsAddTabButtonVisible="False">
+            <TabView.TabStripHeader>
+                <Grid x:Name="ShellTitleBarInset" Background="Transparent" />
+            </TabView.TabStripHeader>
+            <TabView.TabStripFooter>
+                <Grid x:Name="CustomDragRegion" Background="Transparent">
+                    <SplitButton
+                        Margin="0,8,0,0"
+                        VerticalAlignment="Center"
+                        Content="{ui:FontIcon FontSize=12,
+                                              Glyph=&#xE710;}" />
+                </Grid>
+            </TabView.TabStripFooter>
+            <TabView.TabItems>
+                <TabViewItem Header="Settings">
+                    <TabViewItem.IconSource>
+                        <SymbolIconSource Symbol="Setting" />
+                    </TabViewItem.IconSource>
+                    <pages:SettingsShellPage />
+                </TabViewItem>
+                <TabViewItem Header="Windows Powershell">
+                    <TabViewItem.IconSource>
+                        <BitmapIconSource ShowAsMonochrome="False" UriSource="ms-appx:///Assets/pwsh.png" />
+                    </TabViewItem.IconSource>
+                    <Grid />
+                </TabViewItem>
+            </TabView.TabItems>
+        </TabView>
+    </Grid>
+</Window>

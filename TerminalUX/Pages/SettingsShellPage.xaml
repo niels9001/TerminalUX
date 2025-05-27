@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="TerminalUX.Pages.SettingsShellPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:TerminalUX.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource LayerOnMicaBaseAltFillColorDefaultBrush}">
+        <NavigationView
+            x:Name="NavView"
+            Margin="0,8,0,0"
+            IsBackButtonVisible="Collapsed"
+            IsSettingsVisible="False"
+            ItemInvoked="NavView_ItemInvoked"
+            Loaded="NavigationView_Loaded">
+            <NavigationView.Resources>
+                <SolidColorBrush x:Key="NavigationViewContentBackground" Color="Transparent" />
+                <SolidColorBrush x:Key="NavigationViewContentGridBorderBrush" Color="Transparent" />
+            </NavigationView.Resources>
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="Startup" Tag="Launch_Nav">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE7B5;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Content="Interaction" Tag="Interaction_Nav">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE7C9;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Content="Appearance" Tag="GlobalAppearance_Nav">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE771;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Content="Color schemes" Tag="ColorSchemes_Nav">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE790;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Content="Rendering" Tag="Rendering_Nav">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE7F8;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Content="Compatibility" Tag="Compatibility_Nav">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xEC7A;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Content="Actions" Tag="Actions_Nav">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE765;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItemHeader Content="Profiles" />
+                <NavigationViewItem
+                    x:Name="BaseLayerMenuItem"
+                    Content="Defaults"
+                    Tag="GlobalProfile_Nav">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE81E;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Add new profile" Tag="NewTabMenu_Nav">
+                    <NavigationViewItem.Icon>
+                        <SymbolIcon Symbol="Add" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+
+            <NavigationView.FooterMenuItems>
+                <!--  The OpenJson item needs both Tapped and KeyDown handler  -->
+                <NavigationViewItem
+                    Content="Open JSON file"
+                    SelectsOnInvoked="False"
+                    Tag="OpenJson_Nav">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE713;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.FooterMenuItems>
+            <Frame x:Name="NavFrame" />
+        </NavigationView>
+    </Grid>
+</Page>
