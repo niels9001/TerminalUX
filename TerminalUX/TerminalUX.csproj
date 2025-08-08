@@ -13,8 +13,34 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Assets\Black.jpg" />
+    <None Remove="Assets\Blue.png" />
+    <None Remove="Assets\Image1.png" />
+    <None Remove="Assets\Image2.png" />
+    <None Remove="Assets\Image3.png" />
+    <None Remove="Assets\Image4.png" />
+    <None Remove="Assets\Image5.png" />
+    <None Remove="Assets\Picture1.gif" />
+    <None Remove="Assets\Picture2.png" />
+    <None Remove="Assets\Picture3.png" />
+    <None Remove="Assets\Picture4.png" />
+    <None Remove="Assets\Picture5.png" />
+    <None Remove="Assets\Picture6.png" />
+    <None Remove="Assets\Platinum.jpg" />
     <None Remove="Assets\pwsh.png" />
+    <None Remove="Assets\pwsh.scale-200.png" />
+    <None Remove="Assets\Red.png" />
+    <None Remove="Assets\terminal1.png" />
+    <None Remove="Assets\terminal2.png" />
+    <None Remove="Assets\vs-cmd.scale-200.png" />
+    <None Remove="Assets\vs-pwsh.scale-200.png" />
+    <None Remove="Assets\Windows.png" />
+    <None Remove="Controls\AnimatedImage.xaml" />
+    <None Remove="Controls\HeroImage.xaml" />
+    <None Remove="Controls\PictureHolder.xaml" />
     <None Remove="Pages\DefaultsPage.xaml" />
+    <None Remove="Pages\OOBEPage.xaml" />
+    <None Remove="Pages\OOBEPage2.xaml" />
     <None Remove="Pages\SettingsShellPage.xaml" />
   </ItemGroup>
 
@@ -41,14 +67,74 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="CommunityToolkit.WinUI.Animations" Version="8.2.250402" />
     <PackageReference Include="CommunityToolkit.WinUI.Controls.SettingsControls" Version="8.2.250402" />
+    <PackageReference Include="CommunityToolkit.WinUI.Media" Version="8.2.250402" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.4188" />
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.250515001-experimental2" />
   </ItemGroup>
   <ItemGroup>
+    <Content Update="Assets\Black.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Blue.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Image1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Image2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Image3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Image4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Image5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Picture1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Platinum.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Update="Assets\pwsh.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Update="Assets\Red.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Windows.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\OOBEPage2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Controls\PictureHolder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Controls\AnimatedImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Controls\OpacityMaskView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\OOBEPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Pages\DefaultsPage.xaml">
@@ -57,6 +143,11 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Pages\SettingsShellPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Controls\HeroImage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

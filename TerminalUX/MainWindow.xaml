@@ -24,7 +24,6 @@
         <TabView
             x:Name="Tabs"
             VerticalAlignment="Stretch"
-            CanTearOutTabs="True"
             IsAddTabButtonVisible="False">
             <TabView.TabStripHeader>
                 <Grid x:Name="ShellTitleBarInset" Background="Transparent" />
@@ -50,6 +49,47 @@
                         <BitmapIconSource ShowAsMonochrome="False" UriSource="ms-appx:///Assets/pwsh.png" />
                     </TabViewItem.IconSource>
                     <Grid />
+                </TabViewItem>
+                <!--<TabViewItem
+                    FontWeight="SemiBold"
+                    Foreground="Black" Style="{StaticResource CustomTabViewItemStyle}"
+                    Header="Welcome to Terminal">
+                    <TabViewItem.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Offset="0.0" Color="#42f28d" />
+                -->
+                <!--  Green  -->
+                <!--
+                            <GradientStop Offset="1.0" Color="#61e3f5" />
+                -->
+                <!--  Blue  -->
+                <!--
+                        </LinearGradientBrush>
+                    </TabViewItem.Background>
+                -->
+                <!--<TabViewItem.IconSource>
+                        <BitmapIconSource ShowAsMonochrome="False" UriSource="ms-appx:///Assets/pwsh.png" />
+                    </TabViewItem.IconSource>-->
+                <!--
+                    <pages:OOBEPage />
+                </TabViewItem>-->
+                <TabViewItem
+                    FontWeight="SemiBold"
+                    Foreground="Black"
+                    Header="Welcome to Terminal2"
+                    Style="{StaticResource CustomTabViewItemStyle}">
+                    <TabViewItem.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Offset="0.0" Color="#42f28d" />
+                            <!--  Green  -->
+                            <GradientStop Offset="1.0" Color="#61e3f5" />
+                            <!--  Blue  -->
+                        </LinearGradientBrush>
+                    </TabViewItem.Background>
+                    <!--<TabViewItem.IconSource>
+           <BitmapIconSource ShowAsMonochrome="False" UriSource="ms-appx:///Assets/pwsh.png" />
+       </TabViewItem.IconSource>-->
+                    <pages:OOBEPage2 />
                 </TabViewItem>
             </TabView.TabItems>
         </TabView>
