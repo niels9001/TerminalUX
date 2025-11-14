@@ -43,8 +43,11 @@ namespace TerminalUX.Pages
 
             switch (Tag)
             {
-                case "GlobalProfile_Nav":
+                case "profile":
                     NavFrame.Navigate(typeof(DefaultsPage));
+                    break;
+                case "startup":
+                    NavFrame.Navigate(typeof(StartupPage));
                     break;
                 default:
                     NavFrame.Navigate(typeof(DefaultsPage));
@@ -55,6 +58,7 @@ namespace TerminalUX.Pages
         private void NavigationView_Loaded(object sender, RoutedEventArgs e)
         {
             NavView.SelectedItem = NavView.MenuItems[0];
+            NavFrame.Navigate(typeof(StartupPage));
         }
     }
 }

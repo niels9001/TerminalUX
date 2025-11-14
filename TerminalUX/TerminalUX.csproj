@@ -35,13 +35,10 @@
     <None Remove="Assets\vs-cmd.scale-200.png" />
     <None Remove="Assets\vs-pwsh.scale-200.png" />
     <None Remove="Assets\Windows.png" />
-    <None Remove="Controls\AnimatedImage.xaml" />
-    <None Remove="Controls\HeroImage.xaml" />
-    <None Remove="Controls\PictureHolder.xaml" />
+    <None Remove="Controls\SettingsPageControl.xaml" />
     <None Remove="Pages\DefaultsPage.xaml" />
-    <None Remove="Pages\OOBEPage.xaml" />
-    <None Remove="Pages\OOBEPage2.xaml" />
     <None Remove="Pages\SettingsShellPage.xaml" />
+    <None Remove="Pages\StartupPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -70,8 +67,8 @@
     <PackageReference Include="CommunityToolkit.WinUI.Animations" Version="8.2.250402" />
     <PackageReference Include="CommunityToolkit.WinUI.Controls.SettingsControls" Version="8.2.250402" />
     <PackageReference Include="CommunityToolkit.WinUI.Media" Version="8.2.250402" />
-    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.4188" />
-    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.250515001-experimental2" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.6901" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.251106002" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="Assets\Black.jpg">
@@ -112,27 +109,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Pages\OOBEPage2.xaml">
+    <Page Update="Controls\SettingsPageControl.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Controls\PictureHolder.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Controls\AnimatedImage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Controls\OpacityMaskView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Pages\OOBEPage.xaml">
+    <Page Update="Pages\StartupPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
@@ -143,11 +125,6 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Pages\SettingsShellPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Controls\HeroImage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

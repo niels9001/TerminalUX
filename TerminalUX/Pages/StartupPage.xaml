@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="TerminalUX.Pages.StartupPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:TerminalUX.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:TerminalUX.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:tk="using:CommunityToolkit.WinUI.Controls"
+    xmlns:ui="using:CommunityToolkit.WinUI"
+    mc:Ignorable="d">
+
+    <Grid MaxWidth="1000">
+        <controls:SettingsPageControl Title="Startup">
+            <controls:SettingsPageControl.PageContent>
+                <StackPanel Spacing="{StaticResource SettingsCardSpacing}">
+                    <tk:SettingsCard
+                        Description="Profile opened by '+' icon or new tab key binding."
+                        Header="Default profile"
+                        HeaderIcon="{ui:FontIcon Glyph=&#xE748;}">
+                        <ComboBox SelectedIndex="0">
+                            <ComboBoxItem Content="Windows PowerShell" />
+                        </ComboBox>
+                    </tk:SettingsCard>
+
+                    <tk:SettingsCard
+                        Description="Terminal app launched when a command-line runs without an active session (e.g., Start menu or Run dialog)."
+                        Header="Default terminal application"
+                        HeaderIcon="{ui:FontIcon Glyph=&#xE756;}">
+                        <ComboBox SelectedIndex="0">
+                            <ComboBoxItem Content="Windows Terminal" />
+                        </ComboBox>
+                    </tk:SettingsCard>
+
+                    <tk:SettingsExpander
+                        Description="Sets the app's display language, overriding the Windows default interface language."
+                        Header="Language"
+                        HeaderIcon="{ui:FontIcon Glyph=&#xF2B7;}">
+                        <ComboBox SelectedIndex="0">
+                            <ComboBoxItem Content="Default" />
+                        </ComboBox>
+                        <tk:SettingsExpander.Items>
+                            <tk:SettingsCard Description="Specifies the default language for the IME. For languages that use IMEs and non-Latin scripts, this setting can force English input at startup." Header="Default terminal application">
+                                <ComboBox SelectedIndex="0">
+                                    <ComboBoxItem Content="Default" />
+                                </ComboBox>
+                            </tk:SettingsCard>
+                        </tk:SettingsExpander.Items>
+                    </tk:SettingsExpander>
+
+                    <tk:SettingsExpander Header="Launch at startup" HeaderIcon="{ui:FontIcon Glyph=&#xF71C;}">
+                        <ToggleSwitch IsOn="True" />
+                        <tk:SettingsExpander.Items>
+                            <tk:SettingsCard Header="Launch behavior">
+                                <ComboBox SelectedIndex="0">
+                                    <ComboBoxItem Content="Open a tab with the default profile" />
+                                </ComboBox>
+                            </tk:SettingsCard>
+                            <tk:SettingsCard Description="Controls how new terminal instances attach to existing windows" Header="Create a new window">
+                                <ComboBox SelectedIndex="0">
+                                    <ComboBoxItem Content="Create a new window" />
+                                </ComboBox>
+                            </tk:SettingsCard>
+                            <tk:SettingsCard Description="Number of rows and columns displaying in the window upon first load, measure in characters" Header="Launch size">
+                                <StackPanel Orientation="Horizontal" Spacing="8">
+                                    <TextBlock VerticalAlignment="Center" Text="Columns" />
+                                    <NumberBox SpinButtonPlacementMode="Compact" Value="120" />
+                                    <TextBlock
+                                        Margin="12,0,0,0"
+                                        VerticalAlignment="Center"
+                                        Text="Rows" />
+                                    <NumberBox SpinButtonPlacementMode="Compact" Value="30" />
+                                </StackPanel>
+                            </tk:SettingsCard>
+                            <tk:SettingsCard Header="Launch mode">
+                                <ComboBox SelectedIndex="0">
+                                    <ComboBoxItem Content="Default" />
+                                </ComboBox>
+                            </tk:SettingsCard>
+                            <tk:SettingsCard ContentAlignment="Left">
+                                <CheckBox Content="Center on launch" />
+                            </tk:SettingsCard>
+                        </tk:SettingsExpander.Items>
+                    </tk:SettingsExpander>
+                </StackPanel>
+            </controls:SettingsPageControl.PageContent>
+        </controls:SettingsPageControl>
+    </Grid>
+</Page>
