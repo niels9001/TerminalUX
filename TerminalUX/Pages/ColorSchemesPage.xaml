@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="TerminalUX.Pages.AppearancePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:TerminalUX.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:TerminalUX.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:tk="using:CommunityToolkit.WinUI.Controls"
+    xmlns:ui="using:CommunityToolkit.WinUI"
+    mc:Ignorable="d">
+
+    <Grid MaxWidth="1000">
+        <controls:SettingsPageControl Title="Appearance">
+            <controls:SettingsPageControl.PageContent>
+                <StackPanel Spacing="{StaticResource SettingsCardSpacing}">
+
+                    <!--  You can do what ever you want within these lines  -->
+                    <tk:SettingsCard
+                        Description="Download the Windows Community Toolkit Gallery to learn more about me"
+                        Header="Hello, I am a SettingsCard"
+                        HeaderIcon="{ui:FontIcon Glyph=&#xE748;}">
+                        <Button Content="I'm a button" />
+                    </tk:SettingsCard>
+
+                    <TextBlock Style="{StaticResource SettingsSectionHeaderTextBlockStyle}" Text="I am a group Title" />
+                    <tk:SettingsExpander
+                        Description="Download the Windows Community Toolkit Gallery to learn more about me"
+                        Header="Hello, I am a SettingsExpander"
+                        HeaderIcon="{ui:FontIcon Glyph=&#xE748;}">
+                        <ToggleSwitch IsOn="True" />
+                        <tk:SettingsExpander.Items>
+                            <tk:SettingsCard Header="And I'm a SettingsCard that is part of the Expander" HeaderIcon="{ui:FontIcon Glyph=&#xE748;}">
+                                <Button Content="I'm a button" />
+                            </tk:SettingsCard>
+                            <tk:SettingsCard ContentAlignment="Left">
+                                <CheckBox Content="Set my ContentAlignment to Left if you want a CheckBox" />
+                            </tk:SettingsCard>
+                        </tk:SettingsExpander.Items>
+
+                    </tk:SettingsExpander>
+
+                    <!--  You can do what ever you want within these lines  -->
+
+                </StackPanel>
+            </controls:SettingsPageControl.PageContent>
+        </controls:SettingsPageControl>
+    </Grid>
+</Page>

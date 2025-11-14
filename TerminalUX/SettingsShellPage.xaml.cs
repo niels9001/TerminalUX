@@ -44,13 +44,28 @@ namespace TerminalUX.Pages
             switch (Tag)
             {
                 case "profile":
-                    NavFrame.Navigate(typeof(DefaultsPage));
+                    NavFrame.Navigate(typeof(StartupPage));
                     break;
                 case "startup":
                     NavFrame.Navigate(typeof(StartupPage));
                     break;
+                case "interaction":
+                    NavFrame.Navigate(typeof(InteractionPage));
+                    break;
+                case "appearance":
+                    NavFrame.Navigate(typeof(AppearancePage));
+                    break;
+                case "colorschemes":
+                    NavFrame.Navigate(typeof(ColorSchemesPage));
+                    break;
+                case "compatibility":
+                    NavFrame.Navigate(typeof(CompatibilityPage));
+                    break;
+                case "actions":
+                    NavFrame.Navigate(typeof(ActionsPage));
+                    break;
                 default:
-                    NavFrame.Navigate(typeof(DefaultsPage));
+                    NavFrame.Navigate(typeof(StartupPage));
                     break;
             }
         }

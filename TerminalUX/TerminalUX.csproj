@@ -36,7 +36,6 @@
     <None Remove="Assets\vs-pwsh.scale-200.png" />
     <None Remove="Assets\Windows.png" />
     <None Remove="Controls\SettingsPageControl.xaml" />
-    <None Remove="Pages\DefaultsPage.xaml" />
     <None Remove="Pages\SettingsShellPage.xaml" />
     <None Remove="Pages\StartupPage.xaml" />
   </ItemGroup>
@@ -112,14 +111,12 @@
     <Page Update="Controls\SettingsPageControl.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Pages\StartupPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Update="Pages\InteractionPage.xaml">
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Pages\DefaultsPage.xaml">
+    <Page Update="Pages\StartupPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
