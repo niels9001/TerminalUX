@@ -111,6 +111,24 @@
     <Page Update="Controls\SettingsPageControl.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Update="Pages\NewTabPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ActionsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CompatibilityPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\RenderingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ColorSchemesPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\AppearancePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\InteractionPage.xaml">
       <SubType>Designer</SubType>
     </Page>

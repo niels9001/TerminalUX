@@ -12,7 +12,7 @@
     mc:Ignorable="d">
 
     <Grid MaxWidth="1000">
-        <controls:SettingsPageControl Title="Appearance">
+        <controls:SettingsPageControl Title="Color Schemes">
             <controls:SettingsPageControl.PageContent>
                 <StackPanel Spacing="{StaticResource SettingsCardSpacing}">
 
