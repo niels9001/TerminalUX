@@ -16,6 +16,7 @@
             <controls:SettingsPageControl.PageContent>
                 <StackPanel Spacing="{StaticResource SettingsCardSpacing}">
 
+                    <!--  =================================================  -->
                     <!--  You can do what ever you want within these lines  -->
                     <tk:SettingsCard
                         Description="Download the Windows Community Toolkit Gallery to learn more about me"
@@ -41,8 +42,29 @@
 
                     </tk:SettingsExpander>
 
-                    <!--  You can do what ever you want within these lines  -->
+                    <TextBlock Style="{StaticResource SettingsSectionHeaderTextBlockStyle}" Text="Some common UI controls" />
+                    <tk:SettingsCard Header="Slider">
+                        <Slider
+                            Maximum="100"
+                            Minimum="0"
+                            Value="50" />
+                    </tk:SettingsCard>
+                    <tk:SettingsCard Header="ToggleSwitch">
+                        <ToggleSwitch IsOn="True" />
+                    </tk:SettingsCard>
+                    <tk:SettingsCard Header="ComboBox">
+                        <ComboBox>
+                            <ComboBoxItem Content="Option 1" />
+                            <ComboBoxItem Content="Option 2" />
+                            <ComboBoxItem Content="Option 3" />
+                        </ComboBox>
+                    </tk:SettingsCard>
+                    <tk:SettingsCard Header="ComboBox">
+                        <TextBlock Text="I am text" />
+                    </tk:SettingsCard>
 
+                    <!--  You can do what ever you want within these lines  -->
+                    <!--  =================================================  -->
                 </StackPanel>
             </controls:SettingsPageControl.PageContent>
         </controls:SettingsPageControl>
